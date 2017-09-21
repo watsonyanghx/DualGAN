@@ -12,7 +12,7 @@ from tensorflow.python.framework import ops
 
 def batch_norm(x, train=True, name="batch_norm"):
     if train is False:
-        print('---------- ok, ok, ok, ok ----------')
+        print('---------- Running in inference mode ----------')
     # return tf.contrib.layers.batch_norm(x,
     #                                     decay=0.9,
     #                                     updates_collections=None,
@@ -28,7 +28,7 @@ def batch_norm(x, train=True, name="batch_norm"):
                                          name=name,
                                          renorm=True,
                                          renorm_clipping=None,
-                                         renorm_momentum=0.99,
+                                         renorm_momentum=0.9,
                                          fused=False)
 
 
